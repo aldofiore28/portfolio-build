@@ -66,6 +66,8 @@ body {
   width: 85vw;
 }
 
+/* Header title */
+
 .title {
   padding: 2rem;
   text-align: center;
@@ -86,6 +88,8 @@ body {
   margin-top: 0;
 }
 
+/* main img */
+
 .main-img img {
   width: 90%;
   height: auto;
@@ -96,9 +100,9 @@ body {
 
 /* Footer */
 
-.fa-github {
-  width: 20px;
-  height: auto;
+.contact-info {
+  background-color: #7F7C6F;
+  height: 200px;
 }
 
 /* Hover effects fixed navbar */
