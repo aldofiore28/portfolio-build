@@ -51,12 +51,14 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.line {
+.fixed-navbar .line {
   border-top: 0.1rem solid #000;
   width: 80%;
   margin: 0 auto;
   opacity: 0.5;
 }
+
+/* Container for the right part of the website */
 
 .container {
   background-color: #FFFFFF;
@@ -90,7 +92,13 @@ body {
   display: block;
   margin: 0 auto;
   border: 1px solid #C3BEA9;
-  /*border-radius: 0.5%;*/
+}
+
+/* Footer */
+
+.fa-github {
+  width: 20px;
+  height: auto;
 }
 
 /* Hover effects fixed navbar */
@@ -102,4 +110,41 @@ body {
 
 .fixed-navbar ul li:hover a {
   color: #FFF;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+
+  .fixed-navbar {
+    height: 50px;
+    width: 100vw;
+  }
+
+  .fixed-navbar ul {
+    text-align: center;
+    height: 100%;
+  }
+
+  .fixed-navbar ul li {
+    display: inline-block;
+    margin: 1.25rem 2rem;
+  }
+
+  .fixed-navbar ul li a {
+    padding: 0 1rem;
+  }
+
+  .fixed-navbar .profile-img {
+    display: none;
+  }
+
+  .fixed-navbar .line {
+    display: none;
+  }
+
+  .container {
+    width: 100vw;
+    margin-top: 50px;
+  }
 }
