@@ -215,7 +215,9 @@ body {
   }
 
   .hidden-contact {
-    display: inline-block;
+    display: block;
+    margin-bottom: 2rem;
+
   }
 }
 
