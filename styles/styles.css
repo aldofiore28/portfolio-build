@@ -44,7 +44,6 @@ body {
   width: 15%;
   position: fixed;
   background-color: #CCC6B1;
-  border-right: 1px solid #E8E9F3;
   text-align: center;
 }
 
@@ -126,7 +125,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  border: 0.1rem solid #E8E9F3;
 }
 
 /* Footer */
