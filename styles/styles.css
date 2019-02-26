@@ -111,6 +111,7 @@ body {
 
 .main-img img {
   width: 90%;
+  max-width: 1000px;
 }
 
 /* About me section */
@@ -139,10 +140,6 @@ body {
   width: 30px;
   height: auto;
   margin: 0 20px;
-}
-
-.hidden-contact .icons {
-  padding: 0;
 }
 
 /* Hover effects fixed navbar */
