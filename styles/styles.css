@@ -28,7 +28,7 @@ body {
 }
 
 .internal-container {
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -40,7 +40,7 @@ body {
   width: 15%;
   background-color: #CCC6B1;
   position: fixed;
-  border-right: 1px solid #C3BEA9;
+  border-right: 1px solid #E8E9F3;
 }
 
 .fixed-navbar .profile-img {
@@ -102,12 +102,23 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  border: 1px solid #C3BEA9;
+  border: 1px solid #E8E9F3;
 }
 
 /* Footer */
 
+.internal-container h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
 /* icons attributes */
+
+.icons {
+  width: 100%;
+  margin: 0 auto;
+}
 
 .icon-attributes {
   width: 30px;
@@ -117,7 +128,7 @@ body {
 /* Hover effects fixed navbar */
 
 .fixed-navbar ul li:hover {
-  background-color: #000000;
+  background-color: #948B89;
   opacity: 0.1;
 }
 
