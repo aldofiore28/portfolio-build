@@ -25,12 +25,14 @@ body {
   background-color: #FFFFFF;
   float: right;
   width: 85%;
+  text-align: center;
 }
 
 .internal-container {
   background-color: ;
   width: 85%;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Global finish */
@@ -43,6 +45,7 @@ body {
   position: fixed;
   background-color: #CCC6B1;
   border-right: 1px solid #E8E9F3;
+  text-align: center;
 }
 
 .fixed-navbar .profile-img {
@@ -59,7 +62,6 @@ body {
 .fixed-navbar ul li {
   font-size: 2rem;
   text-transform: uppercase;
-  text-align: center;
   margin: 2rem 0.5rem;
 }
 
@@ -82,7 +84,6 @@ body {
 .fixed-navbar .icons {
   width: 80%;
   margin: 0 auto;
-  text-align: center;
   padding-top: 2rem;
 }
 
@@ -137,7 +138,6 @@ body {
 
 .hidden-contact h3 {
   font-size: 3rem;
-  text-align: center;
 }
 
 .hidden-contact .icon-attributes {
@@ -180,7 +180,6 @@ body {
   }
 
   .fixed-navbar ul {
-    text-align: center;
     height: 100%;
   }
 
