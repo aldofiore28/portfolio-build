@@ -33,13 +33,14 @@ body {
 }
 
 /* Global finish */
+
 /* Fixed Navbar */
 
 .fixed-navbar {
   height: 100%;
   width: 15%;
-  background-color: #CCC6B1;
   position: fixed;
+  background-color: #CCC6B1;
   border-right: 1px solid #E8E9F3;
 }
 
@@ -75,6 +76,28 @@ body {
   opacity: 0.5;
 }
 
+/* icons attributes */
+
+.fixed-navbar .icons {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.fixed-navbar .icon-attributes {
+  width: 20px;
+  height: auto;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+.fixed-navbar .icon-links {
+  padding: 0;
+  display: inline-block;
+  width: 20%;
+}
+
 /* Header title */
 
 .title {
@@ -102,27 +125,28 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  border: 1px solid #E8E9F3;
+  border: 0.1rem solid #E8E9F3;
 }
 
 /* Footer */
 
-.internal-container h3 {
+.hidden-contact {
+  display: none;
+}
+
+.hidden-contact h3 {
   font-size: 3rem;
   text-align: center;
-  margin: 0;
 }
 
-/* icons attributes */
-
-.icons {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.icon-attributes {
-  width: 30px;
+.hidden-contact .icon-attributes {
+  width: 3rem;
   height: auto;
+  margin: 0 2rem;
+}
+
+.hidden-contact .icons {
+  padding: 0;
 }
 
 /* Hover effects fixed navbar */
@@ -138,11 +162,20 @@ body {
 
 /* Media Queries */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+
+  .container {
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  .internal-container {
+    width: 100%;
+  }
 
   .fixed-navbar {
-    height: 50px;
-    width: 100vw;
+    height: 5rem;
+    width: 100%;
   }
 
   .fixed-navbar ul {
@@ -156,7 +189,7 @@ body {
   }
 
   .fixed-navbar ul li a {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .fixed-navbar .profile-img {
@@ -167,8 +200,29 @@ body {
     display: none;
   }
 
-  .container {
-    width: 100vw;
-    margin-top: 50px;
+  .fixed-navbar .icon-attributes {
+    display: none;
+  }
+
+  .hidden-contact {
+    display: inline-block;
+  }
+
+  .hidden-contact .icons {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fixed-navbar .icon-attributes {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 398px ) {
+
+  .fixed-navbar ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
