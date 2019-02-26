@@ -28,7 +28,6 @@ body {
 .internal-container {
   width: 85%;
   margin: 0 auto;
-  text-align: center;
 }
 
 /* Fixed Navbar */
@@ -121,8 +120,9 @@ body {
 }
 
 .about-me p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: justify;
+  margin-bottom: 10px;
 }
 
 /* Footer */
@@ -208,6 +208,11 @@ body {
     display: block;
     margin-bottom: 20px;
 
+  }
+
+  .about-me p {
+    width: 90%;
+    margin: 0 auto 20px auto;
   }
 }
 
