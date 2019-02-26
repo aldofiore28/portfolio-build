@@ -1,0 +1,220 @@
+/*Imported fonts*/
+@import url('https://fonts.googleapis.com/css?family=Economica:400,700');
+
+/* Global attributes */
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+  /* Setting up the font-size of HTML so I can size rems in a way that is similar to px */
+}
+
+body {
+  font-family: 'Economica', sans-serif;
+}
+
+/* Containers side */
+
+.container {
+  background-color: #FFFFFF;
+  float: right;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.internal-container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Fixed Navbar */
+
+.fixed-navbar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  background-color: #CCC6B1;
+  text-align: center;
+}
+
+.fixed-navbar img {
+  width: 100%;
+}
+
+.fixed-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fixed-navbar ul::after {
+  content: ' ';
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  opacity: 0.2;
+  width: 80%;
+}
+
+.fixed-navbar ul li {
+  font-size: 2rem;
+  margin: 30px 5px;
+}
+
+.fixed-navbar a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 10px 5px;
+}
+
+.fixed-navbar .menu-option-hidden {
+  display: none;
+}
+
+/* icons attributes */
+
+.fixed-navbar .icons {
+  padding-top: 20px;
+}
+
+.fixed-navbar .icon-attributes {
+  width: 20px;
+}
+
+.fixed-navbar .icon-links {
+  padding: 0;
+  display: inline-block;
+  width: 20%;
+}
+
+/* Header title */
+
+.title {
+  padding: 20px;
+}
+
+.title h1 {
+  font-size: 6rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.title h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* main img */
+
+.main-img img {
+  width: 90%;
+}
+
+/* About me section */
+
+.about-me h1 {
+  font-size: 4rem;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* Footer */
+
+.hidden-contact {
+  display: none;
+}
+
+.hidden-contact h3 {
+  font-size: 3rem;
+}
+
+.hidden-contact .icon-attributes {
+  width: 30px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.hidden-contact .icons {
+  padding: 0;
+}
+
+/* Hover effects fixed navbar */
+
+.fixed-navbar ul li:hover {
+  background-color: #948B89;
+  opacity: 0.3;
+}
+
+.fixed-navbar ul li:hover a {
+  color: #FFF;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .internal-container {
+    width: 100%;
+  }
+
+  .fixed-navbar {
+    height: 50px;
+    width: 100%;
+  }
+
+  .fixed-navbar ul {
+    height: 100%;
+    margin: 0;
+  }
+
+  .fixed-navbar ul li {
+    display: inline-block;
+    margin: 12.5px 20px;
+  }
+
+  .fixed-navbar ul li a {
+    padding: 0;
+  }
+
+  .fixed-navbar .menu-option-hidden {
+    display: block;
+  }
+
+  .fixed-navbar img {
+    display: none;
+  }
+
+  .fixed-navbar ul::after {
+    display: none;
+  }
+
+  .fixed-navbar .icon-attributes {
+    display: none;
+  }
+
+  .hidden-contact {
+    display: block;
+    margin-bottom: 20px;
+
+  }
+}
+
+@media screen and (max-width: 413px ) {
+
+  .fixed-navbar ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
