@@ -7,10 +7,8 @@
   box-sizing: border-box;
 }
 
-
 html {
-  font-size: 62.5%;
-  /* Setting up the font-size of HTML so I can size rems in a way that is similar to px */
+  font-size: 10px;
 }
 
 body {
@@ -20,7 +18,7 @@ body {
 /*  ==================== Containers side ====================  */
 
 .container {
-  background-image: url(../img/bkg-img6.jpeg);
+  background-image: url("../img/bkg-img6.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +59,7 @@ body {
 .fixed-navbar ul::after {
   content: ' ';
   display: inline-block;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
   opacity: 0.2;
   width: 80%;
 }
@@ -73,7 +71,7 @@ body {
 
 .fixed-navbar a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
   display: block;
   padding: 10px 5px;
 }
@@ -88,12 +86,12 @@ body {
   padding-top: 20px;
 }
 
-.fixed-navbar .icon-attributes {
+.icons img {
   width: 20px;
   margin: 0 5px;
 }
 
-.fixed-navbar .icon-links {
+.icons a {
   padding: 0;
   display: inline-block;
 }
@@ -105,14 +103,13 @@ body {
 }
 
 .title h1 {
-  font-family: 'Kalam', cursive ;
+  font-family: 'Kalam', cursive, sans-serif;
   font-size: 6rem;
   margin-bottom: 0;
 }
 
 .title h3 {
   font-size: 2rem;
-  margin-bottom: 20px;
   margin-top: 0;
 }
 
@@ -127,7 +124,7 @@ body {
 /*  ==================== About me section ====================  */
 
 .about-me h1 {
-  font-family: 'Kalam', cursive ;
+  font-family: 'Kalam', cursive, sans-serif;
   font-size: 4rem;
   padding-top: 60px;
 }
@@ -148,7 +145,7 @@ body {
 }
 
 .projects h1 {
-  font-family: 'Kalam', cursive ;
+  font-family: 'Kalam', cursive, sans-serif;
   font-size: 4rem;
   margin-top: 60px;
 }
@@ -156,7 +153,6 @@ body {
 .projects article {
   float: left;
   width: 33.3%;
-  padding: 0 10px;
   height: 280px;
  }
 
@@ -164,13 +160,12 @@ body {
   width: 200px;
   height: 200px;
   border: 1px solid #CFD6EA;
-  /*border-radius: 10%;*/
   background-color: #f6faff;
 }
 
 .projects p {
   font-size: 1.6rem;
-  color: #000;
+  color: #000000;
 }
 
 .projects a {
@@ -184,11 +179,11 @@ body {
 }
 
 .hidden-contact h3 {
-  font-family: 'Kalam', cursive ;
+  font-family: 'Kalam', cursive, sans-serif;
   font-size: 3rem;
 }
 
-.hidden-contact .icon-attributes {
+.hidden-contact img {
   width: 30px;
   margin: 0 20px;
 }
@@ -201,7 +196,7 @@ body {
 }
 
 .fixed-navbar ul li:hover a {
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 .projects p:hover {
@@ -219,10 +214,10 @@ body {
   .projects article {
     height: 230px;
   }
-
 }
 
 @media screen and (max-width: 800px) {
+
   .projects img {
     width: 130px;
     height: 130px;
@@ -231,7 +226,6 @@ body {
   .projects article {
     height: 210px;
   }
-
 }
 
 @media screen and (max-width: 750px) {
