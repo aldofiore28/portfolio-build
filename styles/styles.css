@@ -36,7 +36,7 @@ body {
   height: 100%;
   width: 200px;
   position: fixed;
-  background-color: #CCC6B1;
+  background-color: #E3DCC5;
   text-align: center;
 }
 
@@ -151,7 +151,8 @@ body {
 .projects img {
   width: 200px;
   height: 200px;
-  background-color: #CCC6B1;
+  border: 1px solid #948B89;
+  background-color: #E3DCC5;
 }
 
 .projects p {
