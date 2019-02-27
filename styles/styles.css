@@ -1,5 +1,6 @@
 /* ==================== Imported fonts ==================== */
 @import url('https://fonts.googleapis.com/css?family=Economica:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
 
 /*  ==================== Global attributes ====================  */
 * {
@@ -104,6 +105,7 @@ body {
 }
 
 .title h1 {
+  font-family: 'Kalam', cursive ;
   font-size: 6rem;
   margin-bottom: 0;
 }
@@ -125,6 +127,7 @@ body {
 /*  ==================== About me section ====================  */
 
 .about-me h1 {
+  font-family: 'Kalam', cursive ;
   font-size: 4rem;
   padding-top: 60px;
 }
@@ -145,6 +148,7 @@ body {
 }
 
 .projects h1 {
+  font-family: 'Kalam', cursive ;
   font-size: 4rem;
   margin-top: 60px;
 }
@@ -180,6 +184,7 @@ body {
 }
 
 .hidden-contact h3 {
+  font-family: 'Kalam', cursive ;
   font-size: 3rem;
 }
 
@@ -291,10 +296,18 @@ body {
   }
 
   .projects article {
-    float: none;
-    width: 100%;
+    float: left;
+    width: 50%;
     height: 320px;
   }
+}
+
+@media screen and (max-width: 555px) {
+  .projects article {
+    float: none;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 413px ) {
