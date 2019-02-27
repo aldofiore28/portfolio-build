@@ -126,6 +126,12 @@ body {
   text-align: justify;
 }
 
+/* Project Section */
+
+.projects h1 {
+  font-size: 4rem;
+}
+
 /* Footer */
 
 .hidden-contact {
