@@ -19,7 +19,11 @@ body {
 /*  ==================== Containers side ====================  */
 
 .container {
-  background-color: #ccc5bf;
+  background-image: url(../img/bkg-img6.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   float: right;
   margin-left: 200px;
   text-align: center;
@@ -36,14 +40,16 @@ body {
   height: 100%;
   width: 200px;
   position: fixed;
-  background-color: #E3DCC5;
+  background-color: #E1E5EE;
   text-align: center;
-  border-right: 1px solid #948B89;
+  border-right: 1px solid #B0B2B8;
 }
 
 .fixed-navbar .profile-picture {
-  width: 100%;
-  border-bottom: 1px solid #948B89;
+  width: 90%;
+  border-radius: 50%;
+  border: 1px solid #B0B2B8;
+  margin-top: 10px;
 }
 
 .fixed-navbar ul {
@@ -114,6 +120,7 @@ body {
 .main-img img {
   width: 90%;
   max-width: 1000px;
+  border-right: 1px solid #B0B2B8;
 }
 
 /*  ==================== About me section ====================  */
@@ -125,7 +132,6 @@ body {
 .about-me p {
   font-size: 2rem;
   text-align: justify;
-  /*margin-bottom: 10px;*/
   width: 90%;
   margin: 0 auto 10px auto;
 }
@@ -152,8 +158,9 @@ body {
 .projects img {
   width: 200px;
   height: 200px;
-  border: 1px solid #948B89;
-  background-color: #E3DCC5;
+  border: 1px solid #CFD6EA;
+  /*border-radius: 10%;*/
+  background-color: #f6faff;
 }
 
 .projects p {
@@ -183,7 +190,7 @@ body {
 /*  ==================== Hover effects ====================  */
 
 .fixed-navbar ul li:hover {
-  background-color: #948B89;
+  background-color: #595758;
   opacity: 0.3;
 }
 
