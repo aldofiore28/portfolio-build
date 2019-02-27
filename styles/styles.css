@@ -19,7 +19,7 @@ body {
 /*  ==================== Containers side ====================  */
 
 .container {
-  /*background-color: #FFFFFF;*/
+  background-color: #ccc5bf;
   float: right;
   margin-left: 200px;
   text-align: center;
@@ -38,11 +38,12 @@ body {
   position: fixed;
   background-color: #E3DCC5;
   text-align: center;
+  border-right: 1px solid #948B89;
 }
 
 .fixed-navbar .profile-picture {
   width: 100%;
-  border: 1px solid #948B89;
+  border-bottom: 1px solid #948B89;
 }
 
 .fixed-navbar ul {
