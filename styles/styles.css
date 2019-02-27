@@ -1,7 +1,7 @@
-/*Imported fonts*/
+/* ==================== Imported fonts ==================== */
 @import url('https://fonts.googleapis.com/css?family=Economica:400,700');
 
-/* Global attributes */
+/*  ==================== Global attributes ====================  */
 * {
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ body {
   font-family: 'Economica', sans-serif;
 }
 
-/* Containers side */
+/*  ==================== Containers side ====================  */
 
 .container {
   background-color: #FFFFFF;
@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-/* Fixed Navbar */
+/* ====================  Fixed Navbar ====================  */
 
 .fixed-navbar {
   height: 100%;
@@ -74,7 +74,7 @@ body {
   display: none;
 }
 
-/* icons attributes */
+/*  ==================== icons attributes ====================  */
 
 .fixed-navbar .icons {
   padding-top: 20px;
@@ -90,7 +90,7 @@ body {
   width: 20%;
 }
 
-/* Header title */
+/*  ==================== Header title ====================  */
 
 .title {
   padding: 20px;
@@ -108,14 +108,14 @@ body {
   margin-top: 0;
 }
 
-/* main img */
+/*  ==================== main img  ==================== */
 
 .main-img img {
   width: 90%;
   max-width: 1000px;
 }
 
-/* About me section */
+/*  ==================== About me section ====================  */
 
 .about-me h1 {
   font-size: 4rem;
@@ -126,13 +126,13 @@ body {
   text-align: justify;
 }
 
-/* Project Section */
+/*  ==================== Project Section ====================  */
 
 .projects h1 {
   font-size: 4rem;
 }
 
-/* Footer */
+/*  ==================== Footer ====================  */
 
 .hidden-contact {
   display: none;
@@ -152,7 +152,7 @@ body {
   padding: 0;
 }
 
-/* Hover effects fixed navbar */
+/*  ==================== Hover effects ====================  */
 
 .fixed-navbar ul li:hover {
   background-color: #948B89;
@@ -163,7 +163,7 @@ body {
   color: #FFF;
 }
 
-/* Media Queries */
+/*  ==================== Media Queries ====================  */
 
 @media screen and (max-width: 600px) {
 
