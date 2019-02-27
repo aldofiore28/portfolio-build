@@ -40,8 +40,9 @@ body {
   text-align: center;
 }
 
-.fixed-navbar img {
+.fixed-navbar .profile-picture {
   width: 100%;
+  border: 1px solid #948B89;
 }
 
 .fixed-navbar ul {
@@ -123,7 +124,9 @@ body {
 .about-me p {
   font-size: 2rem;
   text-align: justify;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  width: 90%;
+  margin: 0 auto 10px auto;
 }
 
 /*  ==================== Project Section ====================  */
@@ -131,6 +134,7 @@ body {
 
 .projects {
   overflow: auto;
+  max-width: 1000px;
 }
 
 .projects h1 {
@@ -138,24 +142,25 @@ body {
 }
 
 .projects article {
-  height: 200px;
   float: left;
   width: 33.3%;
   padding: 0 10px;
+  height: 280px;
  }
 
-.projects div {
-
-}
-
 .projects img {
-  width: 100%;
-  min-width: 150px;
+  width: 200px;
+  height: 200px;
   background-color: #CCC6B1;
 }
 
 .projects p {
   font-size: 1.6rem;
+  color: #000;
+}
+
+.projects a {
+  text-decoration: none;
 }
 
 /*  ==================== Footer ====================  */
@@ -182,6 +187,10 @@ body {
 
 .fixed-navbar ul li:hover a {
   color: #FFF;
+}
+
+.projects p:hover {
+  text-decoration: underline;
 }
 
 /*  ==================== Media Queries ====================  */
