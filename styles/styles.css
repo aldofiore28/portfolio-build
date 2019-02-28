@@ -205,7 +205,7 @@ body {
 
 /*  ==================== Media Queries ====================  */
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 992px) {
   .projects img {
     width: 150px;
     height: 150px;
@@ -216,7 +216,7 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 
   .projects img {
     width: 130px;
@@ -228,7 +228,7 @@ body {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
 
   .container {
     width: 100%;
@@ -296,8 +296,8 @@ body {
   }
 }
 
-@media screen and (max-width: 555px) {
-  
+@media screen and (max-width: 600px) {
+
   .projects article {
     float: none;
     width: 100%;
