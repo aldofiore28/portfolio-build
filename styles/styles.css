@@ -1,0 +1,313 @@
+/* ==================== Imported fonts ==================== */
+@import url('https://fonts.googleapis.com/css?family=Economica:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
+
+/*  ==================== Global attributes ====================  */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Economica', sans-serif;
+}
+
+/*  ==================== Containers side ====================  */
+
+.container {
+  background-image: url("../img/bkg-img6.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  float: right;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.internal-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* ====================  Fixed Navbar ====================  */
+
+.fixed-navbar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  background-color: #E1E5EE;
+  text-align: center;
+  border-right: 1px solid #B0B2B8;
+}
+
+.fixed-navbar .profile-picture {
+  width: 90%;
+  border-radius: 50%;
+  border: 1px solid #B0B2B8;
+  margin-top: 10px;
+}
+
+.fixed-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fixed-navbar ul::after {
+  content: ' ';
+  display: inline-block;
+  border-bottom: 1px solid #000000;
+  opacity: 0.2;
+  width: 80%;
+}
+
+.fixed-navbar ul li {
+  font-size: 2rem;
+  margin: 30px 5px;
+}
+
+.fixed-navbar a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  padding: 10px 5px;
+}
+
+.fixed-navbar .menu-option-hidden {
+  display: none;
+}
+
+/*  ==================== icons attributes ====================  */
+
+.fixed-navbar .icons {
+  padding-top: 20px;
+}
+
+.icons img {
+  width: 20px;
+  margin: 0 5px;
+}
+
+.icons a {
+  padding: 0;
+  display: inline-block;
+}
+
+/*  ==================== Header title ====================  */
+
+.title {
+  padding: 20px;
+}
+
+.title h1 {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 6rem;
+  margin-bottom: 0;
+}
+
+.title h3 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+/*  ==================== main img  ==================== */
+
+.main-img img {
+  width: 90%;
+  max-width: 1000px;
+  border-right: 1px solid #B0B2B8;
+}
+
+/*  ==================== About me section ====================  */
+
+.about-me h1 {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 4rem;
+  padding-top: 60px;
+}
+
+.about-me p {
+  font-size: 2rem;
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto 10px auto;
+}
+
+/*  ==================== Project Section ====================  */
+
+
+.projects {
+  overflow: auto;
+  max-width: 1000px;
+}
+
+.projects h1 {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 4rem;
+  margin-top: 60px;
+}
+
+.projects article {
+  float: left;
+  width: 33.3%;
+  height: 280px;
+ }
+
+.projects img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #CFD6EA;
+  background-color: #f6faff;
+}
+
+.projects p {
+  font-size: 1.6rem;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*  ==================== Footer ====================  */
+
+.hidden-contact {
+  display: none;
+}
+
+.hidden-contact h3 {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 3rem;
+}
+
+.hidden-contact img {
+  width: 30px;
+  margin: 0 20px;
+}
+
+/*  ==================== Hover effects ====================  */
+
+.fixed-navbar ul li:hover {
+  background-color: #595758;
+  opacity: 0.3;
+}
+
+.fixed-navbar ul li:hover a {
+  color: #FFFFFF;
+}
+
+.projects p:hover {
+  text-decoration: underline;
+}
+
+/*  ==================== Media Queries ====================  */
+
+@media screen and (max-width: 992px) {
+  .projects img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .projects article {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .projects img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .projects article {
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .internal-container {
+    width: 100%;
+  }
+
+  .fixed-navbar {
+    height: 50px;
+    width: 100%;
+  }
+
+  .fixed-navbar ul {
+    height: 100%;
+    margin: 0;
+  }
+
+  .fixed-navbar ul li {
+    display: inline-block;
+    margin: 12.5px 20px;
+  }
+
+  .fixed-navbar ul li a {
+    padding: 0;
+  }
+
+  .fixed-navbar .menu-option-hidden {
+    display: block;
+  }
+
+  .fixed-navbar img {
+    display: none;
+  }
+
+  .fixed-navbar ul::after {
+    display: none;
+  }
+
+  .fixed-navbar .icon-attributes {
+    display: none;
+  }
+
+  .hidden-contact {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .about-me p {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  .projects img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .projects article {
+    float: left;
+    width: 50%;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .projects article {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 413px ) {
+
+  .fixed-navbar ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
