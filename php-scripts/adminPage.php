@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="styles/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="styles/adminPageStyle.css" type="text/css" />
+        <link rel="stylesheet" href="../styles/normalize.css" type="text/css" />
+        <link rel="stylesheet" href="../styles/adminPageStyle.css" type="text/css" />
         <title>Admin Page</title>
     </head>
     <body>
