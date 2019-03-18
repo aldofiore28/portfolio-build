@@ -1,4 +1,12 @@
-<?php ?>
+<?php
+
+require 'functions/dbConnection.php';
+
+$db = getDBConn();
+
+$textToAdd = $_POST['toAddContent'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +22,7 @@
             <h1>Add Content</h1>
             <form id="formReference" method="post" action="addContent.php">
                 <textarea name="toAddContent" form="formReference" placeholder="New Content..."></textarea>
-                <input type="submit" value="Add!" />
+                <input type="submit" value="Add!" name="add" />
             </form>
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
