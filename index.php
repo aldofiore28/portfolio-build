@@ -3,6 +3,8 @@
 require 'php-scripts/dbConnection.php';
 require 'php-scripts/viewFromDB.php';
 
+$db = getDBConn();
+
 ?>
 
 <!DOCTYPE html>
