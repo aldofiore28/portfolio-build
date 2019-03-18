@@ -10,3 +10,20 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+main {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    border-radius: 2px;
+}
+
+
+
