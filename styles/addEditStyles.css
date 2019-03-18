@@ -18,13 +18,11 @@ main {
 }
 
 h1 {
-    text-align: left;
     margin-bottom: 0;
 }
 
 input {
     border-radius: 2px;
-    display: block;
     float: right;
 }
 

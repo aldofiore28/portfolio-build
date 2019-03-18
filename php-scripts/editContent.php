@@ -12,8 +12,8 @@
     <body>
         <main>
             <h1>Edit Content</h1>
-            <form method="post" action="editContent.php">
-                <textarea></textarea>
+            <form id="formReference" method="post" action="editContent.php">
+                <textarea form="formReference" name="toEditContent"></textarea>
                 <input type="submit" value="Edit!" />
             </form>
 

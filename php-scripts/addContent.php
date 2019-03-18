@@ -12,8 +12,8 @@
     <body>
         <main>
             <h1>Add Content</h1>
-            <form method="post" action="addContent.php">
-                <textarea placeholder="New Content..."></textarea>
+            <form id="formReference" method="post" action="addContent.php">
+                <textarea name="toAddContent" form="formReference" placeholder="New Content..."></textarea>
                 <input type="submit" value="Add!" />
             </form>
             <button>
