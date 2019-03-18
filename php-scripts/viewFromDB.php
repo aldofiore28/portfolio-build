@@ -11,7 +11,7 @@
  */
 function getAboutMeContent (PDO $db) : array {
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `deleted` = 0;');
+    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `deleted` = 0 GROUP BY `section`;');
 
     $query->execute();
 

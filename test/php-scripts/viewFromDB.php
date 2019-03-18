@@ -27,4 +27,12 @@ class StackTest extends Testcase
         $this->expectException(TypeError::class);
         viewContent($input);
     }
+
+    public function testViewContentFailure()
+    {
+        $expected = '';
+        $input = [['section'=>'']];
+        $case = viewContent($input);
+        $this->assertEquals($expected, $case);
+    }
 }
