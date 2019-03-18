@@ -1,10 +1,19 @@
 <?php
 
 require 'functions/dbConnection.php';
+require 'functions/queryAddContent.php';
 
 $db = getDBConn();
 
-$textToAdd = $_POST['toAddContent'];
+if (isset($_POST['add'])) {
+    if($_POST['toAddContent']) {
+        $textToAdd = $_POST['toAddContent'];
+        $resultQuery = insertTextInDB($db, $textToAdd);
+        $output = checkAddedTextWorked($resultQuery);
+    } else {
+        $output = '<p class="error">You need to add some text!</p>';
+    }
+}
 
 ?>
 
@@ -27,6 +36,9 @@ $textToAdd = $_POST['toAddContent'];
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
+
+            <?php echo $output; ?>
+
         </main>
     </body>
 
