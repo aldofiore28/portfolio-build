@@ -33,6 +33,11 @@ textarea {
     height: 200px;
 }
 
-.goBackButton {
-    float: left;
+button {
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }

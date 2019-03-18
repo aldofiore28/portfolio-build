@@ -16,9 +16,9 @@
                 <textarea placeholder="New Content..."></textarea>
                 <input type="submit" value="Add!" />
             </form>
-            <form action="adminPage.php">
-                <input class="goBackButton" type="submit" value="Go back to admin Page!">
-            </form>
+            <button>
+                <a href="adminPage.php">Go to Admin Page</a>
+            </button>
         </main>
     </body>
 
