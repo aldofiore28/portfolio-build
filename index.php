@@ -1,3 +1,10 @@
+<?php
+
+require 'php-scripts/dbConnection.php';
+require 'php-scripts/viewFromDB.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,8 +44,12 @@
 
       <section id="about-me" class="about-me internal-container">
         <h1>About me...</h1>
-        <p>Hello! My name is Aldo and I`m a 23 year old Italian fella from a small town near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of the laptop with a good problem to solve. I particularly love the feeling of creating something, wether a product or a service that people can use. I currently feel confident in HTML and CSS and I look forward to learning the other languages the course has in store for us to expand my knowledge: PHP, Javascript and MySQL.</p>
-        <p>I migrated in the UK for a scenery change and worked in casinos for about 3 years before I moved to Bath. Whilst considering other opportunities I remembered how much I had enjoyed the software development I experienced at high school, so decided to apply for the Mayden Academy to help change my career and life! In my free time I like to cook, as a proud Italian, for my friends and girlfriend. I also love relaxing at home watching movies.</p>
+        <?php
+
+            $result = getAboutMeContent($db);
+            echo viewContent($result);
+
+        ?>
       </section>
 
       <section id ="projects" class="projects internal-container">
