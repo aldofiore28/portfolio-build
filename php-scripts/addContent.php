@@ -13,7 +13,7 @@
         <main>
             <h1>Add Content</h1>
             <form method="post" action="addContent.php">
-                <textarea cols="10" rows="10" placeholder="New Content..."></textarea>
+                <textarea placeholder="New Content..."></textarea>
                 <input type="submit" value="Add!" />
             </form>
             <form action="adminPage.php">

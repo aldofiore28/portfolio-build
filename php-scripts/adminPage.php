@@ -13,7 +13,7 @@
             <form action="addContent.php" method="post">
                <input type="submit" name="addButton" value="Add" />
             </form>
-            <form action="#" method="post">
+            <form action="editContent.php" method="post">
                 <select name="aboutMeSectionEditing">
 
                 </select>
