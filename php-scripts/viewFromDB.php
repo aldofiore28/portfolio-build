@@ -30,7 +30,11 @@ function getAboutMeContent (PDO $db) : array {
 function viewContent (array $content) : string {
     $result = '';
     foreach ($content as $value) {
-        $result .= '<p>' . $value['section'] . '</p>';
+        if (!in_array('', $value)) {
+            $result .= '<p>' . $value['section'] . '</p>';
+        } else {
+            continue;
+        }
     }
     return $result;
 }
