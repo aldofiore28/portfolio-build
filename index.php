@@ -5,6 +5,9 @@ require 'php-scripts/functions/viewFromDB.php';
 
 $db = getDBConn();
 
+$resultQueryView = getAboutMeContent($db);
+$printAboutMeText = viewContent($resultQueryView);
+
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +51,7 @@ $db = getDBConn();
         <h1>About me...</h1>
         <?php
 
-            $result = getAboutMeContent($db);
-            echo viewContent($result);
+            echo $printAboutMeText;
 
         ?>
       </section>
