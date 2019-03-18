@@ -18,11 +18,18 @@ main {
 }
 
 form {
-    margin-top: 20px;
+    overflow: auto;
+    width: 60%;
+    margin: 20px auto 0 auto;
 }
 
 input {
     border-radius: 2px;
+    float: right;
+}
+
+.sizeContentChangeButton {
+    width: 70px;
 }
 
 
