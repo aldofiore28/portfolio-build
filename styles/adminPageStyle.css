@@ -26,10 +26,18 @@ form {
 input {
     border-radius: 2px;
     float: right;
+    width: 70px;
 }
 
-.sizeContentChangeButton {
-    width: 70px;
+button {
+    border-radius: 2px;
+    width: 70%;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 
