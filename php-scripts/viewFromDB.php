@@ -10,7 +10,7 @@
  * the value as the text that we are going to print in the section.
  */
 function getAboutMeContent (PDO $db) : array {
-    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `deleted` = 0 GROUP BY `section`;');
+    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `deleted` = 0;');
 
     $query->execute();
 
