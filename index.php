@@ -49,11 +49,7 @@ $printAboutMeText = viewContent($resultQueryView);
 
       <section id="about-me" class="about-me internal-container">
         <h1>About me...</h1>
-        <?php
-
-            echo $printAboutMeText;
-
-        ?>
+        <?php echo $printAboutMeText; ?>
       </section>
 
       <section id ="projects" class="projects internal-container">

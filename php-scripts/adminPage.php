@@ -1,10 +1,20 @@
-<?php ?>
+<?php
+
+require 'functions/dbConnection.php';
+require 'functions/populateDropdown.php';
+
+$db = getDBConn();
+
+$arrayOfResults = getItemsFromDB($db);
+$result = populateDropdownEdit($arrayOfResults);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../styles/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="../styles/adminPageStyle.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../styles/adminPageStyle.css">
         <title>Admin Page</title>
     </head>
     <body>
@@ -14,13 +24,17 @@
                <input type="submit" name="addButton" value="Add" />
             </form>
             <form action="editContent.php" method="post">
-                <select name="aboutMeSectionEditing">
+                <select name="aboutMeSectionEditId">
+
+                    <?php echo $result; ?>
 
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
             </form>
             <form action="#" method="post">
                 <select name="aboutMeSectionRemoval">
+
+                    <?php echo $result; ?>
 
                 </select>
                 <input type="submit" name="removeButton" value="Remove" />
