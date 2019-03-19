@@ -2,6 +2,7 @@
 
 require 'functions/dbConnection.php';
 require 'functions/populateDropdown.php';
+require 'functions/queryDeleteContent.php';
 
 $db = getDBConn();
 
@@ -31,7 +32,7 @@ if (isset($_POST['removeButton'])) {
         <main>
             <h1>CMS Portfolio</h1>
             <form action="addContent.php" method="post">
-               <input type="submit" name="addButton" value="Add" />
+               <input class="centerButton" type="submit" name="addButton" value="Add" />
             </form>
             <form action="editContent.php" method="post">
                 <select name="aboutMeSectionEditId">

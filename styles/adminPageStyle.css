@@ -29,6 +29,10 @@ input {
     width: 70px;
 }
 
+.centerButton {
+    float: none;
+}
+
 button {
     border-radius: 2px;
     width: 200px;
@@ -43,4 +47,12 @@ a {
 select {
     width: 250px;
     text-overflow: ellipsis;
+}
+
+.confirmation {
+    color: green;
+}
+
+.error {
+    color: red;
 }
