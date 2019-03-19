@@ -1,9 +1,12 @@
 <?php
 
-require 'php-scripts/dbConnection.php';
-require 'php-scripts/viewFromDB.php';
+require 'php-scripts/functions/dbConnection.php';
+require 'php-scripts/functions/viewFromDB.php';
 
 $db = getDBConn();
+
+$resultQueryView = getAboutMeContent($db);
+$printAboutMeText = viewContent($resultQueryView);
 
 ?>
 
@@ -48,8 +51,7 @@ $db = getDBConn();
         <h1>About me...</h1>
         <?php
 
-            $result = getAboutMeContent($db);
-            echo viewContent($result);
+            echo $printAboutMeText;
 
         ?>
       </section>

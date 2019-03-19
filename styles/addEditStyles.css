@@ -36,6 +36,19 @@ button {
 }
 
 a {
+    width: 100%;
     text-decoration: none;
     color: #000000;
+}
+
+p {
+    text-align: center;
+}
+
+.confirmation {
+    color: green;
+}
+
+.error {
+    color: red;
 }

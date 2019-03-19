@@ -1,6 +1,6 @@
 <?php
 
-require '../../php-scripts/viewFromDB.php';
+require '../../php-scripts/functions/viewFromDB.php';
 
 use PHPUnit\Framework\Testcase;
 
