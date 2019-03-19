@@ -9,7 +9,7 @@
  * @return array Returns an indexed array of associative arrays that we will use to populate the
  * dropdowns.
  */
-function getItemsFromDB (PDO $db) {
+function getItemsFromDB (PDO $db) : array {
     $query = $db->prepare('SELECT `id`, `section` FROM `about_me_section` WHERE `deleted`=0;');
     $query->execute();
     return $query->fetchAll();
@@ -27,7 +27,11 @@ function getItemsFromDB (PDO $db) {
 function populateDropdownEdit(array $array) :string {
     $result ='';
     foreach ($array as $value) {
-        $result .= '<option value="' . $value['id'] . '">' . $value['section'] . '</option>';
+        if (array_key_exists('id', $value) && array_key_exists('section', $value)) {
+            $result .= '<option value="' . $value['id'] . '">' . $value['section'] . '</option>';
+        } else {
+            $result .= '';
+        }
     }
     return $result;
 }
