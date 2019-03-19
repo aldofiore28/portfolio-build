@@ -46,7 +46,6 @@ else if (isset($_POST['edit'])) {
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
-
             <?php echo $errorMessage; ?>
         </main>
     </body>
