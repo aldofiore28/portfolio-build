@@ -80,6 +80,20 @@ body {
   display: none;
 }
 
+.fixed-navbar .cms-button {
+  width: 100px;
+  margin: 20px auto 0 auto;
+  font-size: 1.6rem;
+  padding: 0 5px;
+  background-color:transparent;
+}
+
+.fixed-navbar .cms-button:hover {
+  background-color: #595758;
+  opacity: 0.2;
+  color: #FFFFFF;
+}
+
 /*  ==================== icons attributes ====================  */
 
 .fixed-navbar .icons {
