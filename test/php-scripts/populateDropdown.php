@@ -7,6 +7,14 @@ use PHPUnit\Framework\Testcase;
 class StackTest extends Testcase
 {
 
+    public function testPopulateDropdownSuccess ()
+    {
+        $expected = '<option value="2">ciao</option>';
+        $input = [['id' => 2, 'section'=>'ciao']];
+        $case = populateDropdownEdit($input);
+        $this->assertEquals($case, $expected);
+    }
+
     public function testPopulateDropdownFailure ()
     {
         $expected = '';
