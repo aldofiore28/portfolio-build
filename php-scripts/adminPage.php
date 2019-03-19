@@ -1,10 +1,19 @@
-<?php ?>
+<?php
+
+require 'functions/dbConnection.php';
+require 'functions/queryEditContent.php';
+
+$db = getDBConn();
+
+$arrayOfResults = getItemsFromDB($db);
+$result = populateDropdownEdit($arrayOfResults);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../styles/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="../styles/adminPageStyle.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../styles/adminPageStyle.css">
         <title>Admin Page</title>
     </head>
     <body>
@@ -15,6 +24,8 @@
             </form>
             <form action="editContent.php" method="post">
                 <select name="aboutMeSectionEditing">
+
+                <?php echo $result; ?>
 
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
