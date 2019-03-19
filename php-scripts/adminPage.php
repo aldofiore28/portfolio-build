@@ -1,7 +1,7 @@
 <?php
 
 require 'functions/dbConnection.php';
-require 'functions/queryEditContent.php';
+require 'functions/populateDropdown.php';
 
 $db = getDBConn();
 
@@ -23,15 +23,17 @@ $result = populateDropdownEdit($arrayOfResults);
                <input type="submit" name="addButton" value="Add" />
             </form>
             <form action="editContent.php" method="post">
-                <select name="aboutMeSectionEditing">
+                <select name="aboutMeSectionEditId">
 
-                <?php echo $result; ?>
+                    <?php echo $result; ?>
 
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
             </form>
             <form action="#" method="post">
                 <select name="aboutMeSectionRemoval">
+
+                    <?php echo $result; ?>
 
                 </select>
                 <input type="submit" name="removeButton" value="Remove" />

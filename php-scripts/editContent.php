@@ -1,4 +1,11 @@
-<?php ?>
+<?php
+
+require 'functions/dbConnection.php';
+
+$db = getDBConn();
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +20,16 @@
         <main>
             <h1>Edit Content</h1>
             <form id="formReference" method="post" action="editContent.php">
-                <textarea form="formReference" name="toEditContent"></textarea>
-                <input type="submit" value="Edit!" />
+                <textarea form="formReference" name="toEditContent">
+                    <?php echo $finalString; ?>
+                </textarea>
+                <input type="submit" name="edit" value="Edit!" />
             </form>
 
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
         </main>
-
     </body>
 
 </html>
