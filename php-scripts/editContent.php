@@ -10,8 +10,7 @@ $db = getDBConn();
 
 if (isset($_POST['editButton'])) {
     $_SESSION['id'] = $_POST['aboutMeSectionEditId'];
-    $resultQuery = getSelectedItem($db, $_SESSION['id']);
-    $textToPopulate = generateStringSelectedValue($resultQuery);
+    $textToPopulate = getSelectedItem($db, $_SESSION['id']);
 }
 else if (isset($_POST['edit'])) {
     $editedText = $_POST['contentToEdit'];

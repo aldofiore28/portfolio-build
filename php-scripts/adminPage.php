@@ -8,8 +8,6 @@ $db = getDBConn();
 $arrayOfResults = getItemsFromDB($db);
 $result = populateDropdownEdit($arrayOfResults);
 
-
-
 ?>
 
 <!DOCTYPE html>
