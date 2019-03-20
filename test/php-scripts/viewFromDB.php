@@ -21,7 +21,7 @@ class StackTest extends Testcase
         viewContent($input);
     }
 
-    public function testViewContentMalformed2()
+    public function testViewContentMalformedInt()
     {
         $input = 43;
         $this->expectException(TypeError::class);

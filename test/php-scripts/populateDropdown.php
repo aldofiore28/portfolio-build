@@ -23,19 +23,19 @@ class StackTest extends Testcase
         $this->assertEquals($expected, $case);
     }
 
-    public function testPopulateDropdownMalformed () {
+    public function testPopulateDropdownMalformedInt() {
         $input = 1;
         $this->expectException(TypeError::class);
         populateDropdownEdit($input);
     }
 
-    public function testPopulateDropdownMalformed2() {
+    public function testPopulateDropdownMalformedFloat() {
         $input = 3.2;
         $this->expectException(TypeError::class);
         populateDropdownEdit($input);
     }
 
-    public function testPopulateDropdownMalformed3() {
+    public function testPopulateDropdownMalformedString() {
         $input = 'ciao';
         $this->expectException(TypeError::class);
         populateDropdownEdit($input);

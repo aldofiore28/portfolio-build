@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * The following function will run a SQL query that will take the id and description from the database
  *
@@ -20,13 +19,13 @@ function getItemsFromDB (PDO $db) : array {
  * The id will become the attribute of the option TAG 'value'.
  * The section will become the visual input that you get from the dropdown.
  *
- * @param array $array array retrieved from the database
+ * @param array $arrayOfSelectedIdAndSection array of arrays containing id's and sections.
  *
  * @return string Returns a concatenated string of HTML tags.
  */
-function populateDropdownEdit(array $array) :string {
+function populateDropdownEdit(array $arrayOfSelectedIdAndSection) :string {
     $result ='';
-    foreach ($array as $value) {
+    foreach ($arrayOfSelectedIdAndSection as $value) {
         if (array_key_exists('id', $value) && array_key_exists('section', $value)) {
             $result .= '<option value="' . $value['id'] . '">' . $value['section'] . '</option>';
         } else {

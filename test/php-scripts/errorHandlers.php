@@ -14,7 +14,7 @@ class StackTest extends Testcase
         $this->assertEquals($expected, $case);
     }
 
-    public function testResultQueryErrorsSuccess2()
+    public function testResultQueryErrorsSuccessNegative()
     {
         $input = false;
         $expected = '<p class="error">Fatal Error!</p>';

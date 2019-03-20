@@ -1,14 +1,11 @@
 <?php
 
-require 'functions/dbConnection.php';
-require 'functions/populateDropdown.php';
-require 'functions/queryDeleteContent.php';
-require 'functions/errorHandlers.php';
+require_once 'functions/dbConnection.php';
+require_once 'functions/populateDropdown.php';
+require_once 'functions/queryDeleteContent.php';
+require_once 'functions/errorHandlers.php';
 
 $db = getDBConn();
-
-//$arrayOfResults = getItemsFromDB($db);
-//$result = populateDropdownEdit($arrayOfResults);
 
 if (isset($_POST['removeButton'])) {
     $idTextToDelete = $_POST['aboutMeSectionRemoval'];
@@ -40,13 +37,17 @@ $result = populateDropdownEdit($arrayOfResults);
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
             </form>
-            <form action="#" method="post">
+            <form action="adminPage.php" method="post">
                 <select name="aboutMeSectionRemoval">
                     <?php echo $result; ?>
                 </select>
                 <input type="submit" name="removeButton" value="Remove" />
             </form>
-                    <?php echo $errorMessage; ?>
+                    <?php
+                        if (isset($errorMessage)) {
+                            echo $errorMessage;
+                        }
+                     ?>
             <button>
                 <a href="../index.php">Go to Main Page</a>
             </button>

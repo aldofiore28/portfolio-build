@@ -46,9 +46,9 @@ p {
 }
 
 .confirmation {
-    color: green;
+    color: #008000;
 }
 
 .error {
-    color: red;
+    color: #FF0000;
 }

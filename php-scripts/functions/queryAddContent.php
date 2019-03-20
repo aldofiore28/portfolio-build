@@ -11,8 +11,6 @@
  */
 function insertTextInDB (PDO $db, string $text) : bool {
     $query = $db->prepare('INSERT INTO `about_me_section` (`section`) VALUES (:text);');
-
     $query->bindParam(':text', $text);
-
     return $query->execute();
 }

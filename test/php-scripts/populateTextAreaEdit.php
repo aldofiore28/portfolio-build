@@ -15,21 +15,21 @@ class StackTest extends Testcase
 
     public function testGenerateHiddenInputWithIdFailure() {
         $input = 'ciao';
-        $expected = '<input type="hidden" value="0" name="editId">';
+        $expected = '';
         $case = generateHiddenInputWithId($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testGenerateHiddenInputWithIdFailure2() {
+    public function testGenerateHiddenInputWithIdFailureString() {
         $input = 'ciao4';
-        $expected = '<input type="hidden" value="0" name="editId">';
+        $expected = '';
         $case = generateHiddenInputWithId($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testGenerateHiddenInputWithIdFailure3() {
+    public function testGenerateHiddenInputWithIdFailureNumberAndString() {
         $input = '12b';
-        $expected = '<input type="hidden" value="0" name="editId">';
+        $expected = '';
         $case = generateHiddenInputWithId($input);
         $this->assertEquals($expected, $case);
     }
@@ -54,13 +54,13 @@ class StackTest extends Testcase
         printSelectedItem($input);
     }
 
-    public function testPrintSelectedItemMalformed2() {
+    public function testPrintSelectedItemMalformedFloat() {
         $input = 45.2;
         $this->expectException(TypeError::class);
         printSelectedItem($input);
     }
 
-    public function testPrintSelectedItemMalformed3() {
+    public function testPrintSelectedItemMalformedString() {
         $input = 'test';
         $this->expectException(TypeError::class);
         printSelectedItem($input);

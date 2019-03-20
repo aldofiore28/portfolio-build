@@ -22,13 +22,13 @@ function getSelectedItem (PDO $db, string $idSelectedItem) : array {
  * The following function will take the text from the selected items retrieved from the
  * db, assign it to a variable and return a string
  *
- * @param array $array Array with data to edit retrieved from the db
+ * @param array $arrayOfSection Array with data to edit retrieved from the db
  *
  * @return string Returns a string with the chosen text
  */
-function printSelectedItem (array $array) :string {
-    if (array_key_exists('section', $array)) {
-        return $result = $array['section'];
+function printSelectedItem (array $arrayOfSection) :string {
+    if (array_key_exists('section', $arrayOfSection)) {
+        return $result = $arrayOfSection['section'];
     } else {
         return $result = '';
     }
@@ -45,9 +45,9 @@ function printSelectedItem (array $array) :string {
  */
 function generateHiddenInputWithId (string $id) :string {
     if (isset($id) && is_numeric($id)) {
-        return $hiddenInput = '<input type="hidden" value="' . $id . '" name="editId">';
+        return '<input type="hidden" value="' . $id . '" name="editId">';
     } else {
-        return $hiddenInput = '<input type="hidden" value="0" name="editId">';
+        return '';
     }
 }
 ?>

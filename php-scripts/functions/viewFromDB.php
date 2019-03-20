@@ -11,9 +11,7 @@
  */
 function getAboutMeContent (PDO $db) : array {
     $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `deleted` = 0;');
-
     $query->execute();
-
     return $query->fetchAll();
 }
 
@@ -26,7 +24,7 @@ function getAboutMeContent (PDO $db) : array {
  * @return string Returns a string that contains a p tag and the text retrieved from the
  * array given.
  */
-function viewContent (array $content) : string {
+function viewAboutContent (array $content) : string {
     $result = '';
     foreach ($content as $value) {
         if (!in_array('', $value)) {

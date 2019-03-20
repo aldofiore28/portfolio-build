@@ -1,24 +1,24 @@
 <?php
 
 /**
- * The following function will just check if the query has been executed or not, and generates a
+ * checks if the query has been executed or not, and generates a
  * p tag with a success or error message.
  *
  * @param bool $result The result of the query.
  *
- * @return string Error message in a string and a p tag.
+ * @return string Error message is a p tag inside a string.
  */
 function resultQueryErrors (bool $result) :string {
     if ($result && is_bool($result)) {
-        return $errorMessage = '<p class="confirmation">Operation Successful</p>';
+        return '<p class="confirmation">Operation Successful</p>';
     } else {
-        return $errorMessage = '<p class="error">Fatal Error!</p>';
+        return '<p class="error">Fatal Error!</p>';
     }
 }
 
 
 /**
- * The following function will check if string, after we take the whitespaces from it, has a lenght of 0.
+ * checks if a string, after we take the whitespaces from it, has a length of 0.
  * If is that so, it means that is a value that we don't want to have in the db.
  *
  * @param string $testString The text that we want to check
