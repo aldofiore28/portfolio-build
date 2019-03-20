@@ -8,8 +8,8 @@
  *
  * @return string Error message in a string and a p tag.
  */
-function resultQueryErrors (bool $result) {
-    if ($result) {
+function resultQueryErrors (bool $result) :string {
+    if ($result && is_bool($result)) {
         return $errorMessage = '<p class="confirmation">Operation Successful</p>';
     } else {
         return $errorMessage = '<p class="error">Fatal Error!</p>';
