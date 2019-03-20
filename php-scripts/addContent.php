@@ -7,9 +7,14 @@ require 'functions/errorHandlers.php';
 $db = getDBConn();
 
 if (isset($_POST['add'])) {
-    $textToAdd = $_POST['toAddContent'];
-    $resultQuery = insertTextInDB($db, $textToAdd);
-    $errorMessage = resultQueryErrors($resultQuery);
+    if (!$_POST['toAddContent'] == '') {
+        $textToAdd = $_POST['toAddContent'];
+        $resultQuery = insertTextInDB($db, $textToAdd);
+        $errorMessage = resultQueryErrors($resultQuery);
+    } else {
+        $result = false;
+        $errorMessage = resultQueryErrors($result);
+    }
 }
 
 ?>

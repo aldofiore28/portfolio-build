@@ -15,8 +15,13 @@ if (isset($_POST['editButton'])) {
 else if (isset($_POST['edit'])) {
     $idTextToEdit = $_POST['editId'];
     $editedText = $_POST['contentToEdit'];
-    $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
-    $errorMessage = resultQueryErrors($resultQuery);
+    if (!$editedText == '') {
+        $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
+        $errorMessage = resultQueryErrors($resultQuery);
+    } else {
+        $result = false;
+        $errorMessage = resultQueryErrors($result);
+    }
 }
 
 ?>
