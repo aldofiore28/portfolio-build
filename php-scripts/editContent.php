@@ -16,6 +16,7 @@ else if (isset($_POST['edit'])) {
     $idTextToEdit = $_POST['editId'];
     $editedText = $_POST['contentToEdit'];
     $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
+    $errorMessage = resultQueryErrors($resultQuery);
 }
 
 ?>
@@ -45,7 +46,7 @@ else if (isset($_POST['edit'])) {
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
-            <?php echo resultQueryErrors($resultQuery); ?>
+            <?php echo $errorMessage ?>
         </main>
     </body>
 
