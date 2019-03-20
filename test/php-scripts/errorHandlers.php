@@ -28,4 +28,35 @@ class StackTest extends Testcase
         $this->expectException(TypeError::class);
         resultQueryErrors($input);
     }
+
+    public function testValidateTextSuccess()
+    {
+        $input = 'Ciao Bello!';
+        $expected = true;
+        $case = validateText($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testValidateTextFailure()
+    {
+        $input = '      ';
+        $expected = false;
+        $case = validateText($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testSanitizationTextSuccess()
+    {
+        $input = 'ciao bello';
+        $expected = 'ciao bello';
+        $case = sanitizationText($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testSanitizationTextMalformed()
+    {
+        $input = ['ciao'];
+        $this->expectException(TypeError::class);
+        sanitizationText($input);
+    }
 }
