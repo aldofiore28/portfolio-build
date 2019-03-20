@@ -40,8 +40,7 @@ else if (isset($_POST['edit'])) {
             <h1>Edit Content</h1>
             <form id="formReference" method="post" action="editContent.php">
                 <textarea form="formReference" name="contentToEdit">
-<?php echo $textToPopulate; ?>
-                </textarea>
+<?php echo $textToPopulate; ?></textarea>
                 <?php echo generateHiddenInputWithId($idTextToEdit); ?>
                 <input type="submit" name="edit" value="Edit" />
             </form>
