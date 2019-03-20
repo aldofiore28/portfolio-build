@@ -15,3 +15,32 @@ function resultQueryErrors (bool $result) :string {
         return $errorMessage = '<p class="error">Fatal Error!</p>';
     }
 }
+
+
+/**
+ * The following function will check if string, after we take the whitespaces from it, has a lenght of 0.
+ * If is that so, it means that is a value that we don't want to have in the db.
+ *
+ * @param string $testString The text that we want to check
+ *
+ * @return bool Returns if our checks were true or false
+ */
+function validateText (string $testString) : bool {
+    if (strlen(trim($testString)) <= 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+/**
+ * The following function will remove all the whitespaces from the start and the end of the
+ * inputted text
+ *
+ * @param string $testString The string that we want to change
+ *
+ * @return string The new string without whitespaces
+ */
+function sanitationText (string $testString) : string {
+    return (ltrim(rtrim($testString)));
+}
