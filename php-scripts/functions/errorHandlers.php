@@ -45,5 +45,4 @@ function sanitizationText (string $testString) : string {
     $testString = (ltrim(rtrim($testString)));
     $testString = filter_var($testString, FILTER_SANITIZE_STRING);
     return $testString;
-
 }

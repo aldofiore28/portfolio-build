@@ -38,9 +38,7 @@ if (isset($_POST['add'])) {
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
-
             <?php echo $errorMessage; ?>
-
         </main>
     </body>
 

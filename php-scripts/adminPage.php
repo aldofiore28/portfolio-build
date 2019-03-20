@@ -7,14 +7,17 @@ require 'functions/errorHandlers.php';
 
 $db = getDBConn();
 
-$arrayOfResults = getItemsFromDB($db);
-$result = populateDropdownEdit($arrayOfResults);
+//$arrayOfResults = getItemsFromDB($db);
+//$result = populateDropdownEdit($arrayOfResults);
 
 if (isset($_POST['removeButton'])) {
     $idTextToDelete = $_POST['aboutMeSectionRemoval'];
     $resultQuery = deleteSelectedContent($db, $idTextToDelete);
     $errorMessage = resultQueryErrors($resultQuery);
 }
+
+$arrayOfResults = getItemsFromDB($db);
+$result = populateDropdownEdit($arrayOfResults);
 
 ?>
 
@@ -33,21 +36,16 @@ if (isset($_POST['removeButton'])) {
             </form>
             <form action="editContent.php" method="post">
                 <select name="aboutMeSectionEditId">
-
                     <?php echo $result; ?>
-
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
             </form>
             <form action="#" method="post">
                 <select name="aboutMeSectionRemoval">
-
                     <?php echo $result; ?>
-
                 </select>
                 <input type="submit" name="removeButton" value="Remove" />
             </form>
-
                     <?php echo $errorMessage; ?>
             <button>
                 <a href="../index.php">Go to Main Page</a>
