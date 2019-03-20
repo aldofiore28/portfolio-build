@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: portfolio_CMS
-# Generation Time: 2019-03-20 08:53:55 +0000
+# Generation Time: 2019-03-20 14:53:10 +0000
 # ************************************************************
 
 
@@ -39,19 +39,8 @@ INSERT INTO `about_me_section` (`id`, `section`, `deleted`)
 VALUES
 	(1,'Hello! My name is Aldo and I`m a 23 year old Italian fella from a small town near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of the laptop with a good problem to solve. I particularly love the feeling of creating something, wether a product or a service that people can use. I currently feel confident in HTML and CSS and I look forward to learning the other languages the course has in store for us to expand my knowledge: PHP, Javascript and MySQL.',0),
 	(2,'I migrated in the UK for a scenery change and worked in casinos for about 3 years before I moved to Bath. Whilst considering other opportunities I remembered how much I had enjoyed the software development I experienced at high school, so decided to apply for the Mayden Academy to help change my career and life! In my free time I like to cook, as a proud Italian, for my friends and girlfriend. I also love relaxing at home watching movies.',0),
-	(5,'Lalalalachebella la figadvbjblhicbvlaihdcbvliahdbvliadsbvliahdsbvliaisdbliasdhfi',0),
-	(6,'Ciaohfdbvlusdvfldyb',0),
-	(7,'zffhknlbjlhjvldjsv sda Bambini Negri Brutti bastardi spero che muoiano tutti quantisdfdfsadfs',0),
-	(8,'xfhgvkshvbpiwepbvaiyd;bvbcubsldiyfhduhf',0),
-	(10,'Ciao io sono bello e mi piace giocare a pallone di giorno alle 9',1),
-	(11,'Hi charlie!vjbkdsvhdjksvsdhjfvsdfaklfaglhdbgauhsdbflahisdbvlihadsbvlhzsdbflidbfliabdfikkBGUDF.KUFLO/Bambini blu',0),
-	(12,'zdfghudafhbvlfidjfo',0),
-	(13,'dgfuyooa8ysdgf8yfiwdfghidfgkljgahiodbgouayieygihodlfiugdfnlghadflhghiadsnlgfuo;nw[og',0),
-	(14,'zxcugcudsgovuysdgbfiu',0),
-	(15,'awhgifaerpwf[\'0w\\ef\r\n',0),
-	(16,'Ciao Alessandro!zsfgyidgyfflAISYDG;oqwsudgf;iEUWGFLiqeguvyliqyegVK',0),
-	(17,'ciao',0),
-	(18,'Hi my name is Aldo!!',1);
+	(3,'CIAO BELLO!!!!CHE SCHIFO LA VITA DIOCANE',1),
+	(4,'sdfdfsaafdsadsfasdf',1);
 
 /*!40000 ALTER TABLE `about_me_section` ENABLE KEYS */;
 UNLOCK TABLES;
