@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: portfolio_CMS
-# Generation Time: 2019-03-19 15:46:44 +0000
+# Generation Time: 2019-03-20 08:53:55 +0000
 # ************************************************************
 
 
@@ -43,14 +43,15 @@ VALUES
 	(6,'Ciaohfdbvlusdvfldyb',0),
 	(7,'zffhknlbjlhjvldjsv sda Bambini Negri Brutti bastardi spero che muoiano tutti quantisdfdfsadfs',0),
 	(8,'xfhgvkshvbpiwepbvaiyd;bvbcubsldiyfhduhf',0),
-	(10,'Ciao io sono bello e mi piace giocare a pallone di giorno alle 9',0),
+	(10,'Ciao io sono bello e mi piace giocare a pallone di giorno alle 9',1),
 	(11,'Hi charlie!vjbkdsvhdjksvsdhjfvsdfaklfaglhdbgauhsdbflahisdbvlihadsbvlhzsdbflidbfliabdfikkBGUDF.KUFLO/Bambini blu',0),
 	(12,'zdfghudafhbvlfidjfo',0),
-	(13,'dgfuyooa8ysdgf8yfiwdfghidfgkljgahiodbgouayieygihodlfiug',0),
+	(13,'dgfuyooa8ysdgf8yfiwdfghidfgkljgahiodbgouayieygihodlfiugdfnlghadflhghiadsnlgfuo;nw[og',0),
 	(14,'zxcugcudsgovuysdgbfiu',0),
 	(15,'awhgifaerpwf[\'0w\\ef\r\n',0),
-	(16,'Ciao Alessandro!',0),
-	(17,'ciao',0);
+	(16,'Ciao Alessandro!zsfgyidgyfflAISYDG;oqwsudgf;iEUWGFLiqeguvyliqyegVK',0),
+	(17,'ciao',0),
+	(18,'Hi my name is Aldo!!',1);
 
 /*!40000 ALTER TABLE `about_me_section` ENABLE KEYS */;
 UNLOCK TABLES;

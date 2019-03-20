@@ -16,19 +16,3 @@ function insertTextInDB (PDO $db, string $text) : bool {
 
     return $query->execute();
 }
-
-/**
- * The following function will check if the query has been executed and it will return an output
- * on screen confirming it.
- *
- * @param bool $bool The result of the query
- *
- * @return string HTML tag to print in the account page.
- */
-function checkAddedTextWorked (bool $bool) : string {
-    if ($bool) {
-        return '<p class="confirmation">The text has been added to the database!</p>';
-    } else {
-        return '<p class="error">There was a problem! The text has not been added to the database!</p>';
-    }
-}
