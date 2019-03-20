@@ -39,13 +39,11 @@ if (isset($_POST['editButton'])) {
     <main>
         <h1>Edit Content</h1>
         <form id="formReference" method="post" action="editContent.php">
-            <textarea form="formReference" name="contentToEdit">
-                <?php
+            <textarea form="formReference" name="contentToEdit"><?php
                 if (isset($textToPopulate)) {
                     echo $textToPopulate;
                 }
-                ?>
-            </textarea>
+                ?></textarea>
             <?php
             if (isset($idTextToEdit)) {
                 echo generateHiddenInputWithId($idTextToEdit);
