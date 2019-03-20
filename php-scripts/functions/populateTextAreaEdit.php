@@ -27,8 +27,11 @@ function getSelectedItem (PDO $db, string $idSelectedItem) : array {
  * @return string Returns a string with the chosen text
  */
 function printSelectedItem (array $array) :string {
-    $result = $array['section'];
-    return $result;
+    if (array_key_exists('section', $array)) {
+        return $result = $array['section'];
+    } else {
+        return $result = '';
+    }
 }
 
 

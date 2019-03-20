@@ -33,4 +33,36 @@ class StackTest extends Testcase
         $case = generateHiddenInputWithId($input);
         $this->assertEquals($expected, $case);
     }
+
+    public function testPrintSelectedItemSuccess () {
+        $input = ['section'=>'ciao'];
+        $expected = 'ciao';
+        $case = printSelectedItem($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testPrintSelectedItemFailure() {
+        $input = ['section1'=>'ciao'];
+        $expected = '';
+        $case = printSelectedItem($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testPrintSelectedItemMalformed() {
+        $input = 43;
+        $this->expectException(TypeError::class);
+        printSelectedItem($input);
+    }
+
+    public function testPrintSelectedItemMalformed2() {
+        $input = 45.2;
+        $this->expectException(TypeError::class);
+        printSelectedItem($input);
+    }
+
+    public function testPrintSelectedItemMalformed3() {
+        $input = 'test';
+        $this->expectException(TypeError::class);
+        printSelectedItem($input);
+    }
 }
