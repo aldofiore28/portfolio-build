@@ -28,9 +28,9 @@ function getSelectedItem (PDO $db, string $idSelectedItem) : array {
  */
 function printSelectedItem (array $arrayOfSection) :string {
     if (array_key_exists('section', $arrayOfSection)) {
-        return $result = $arrayOfSection['section'];
+        return $arrayOfSection['section'];
     } else {
-        return $result = '';
+        return '';
     }
 }
 
@@ -44,7 +44,7 @@ function printSelectedItem (array $arrayOfSection) :string {
  * @return string Returns a string with the input tag and his attributes
  */
 function generateHiddenInputWithId (string $id) :string {
-    if (isset($id) && is_numeric($id)) {
+    if (is_numeric($id)) {
         return '<input type="hidden" value="' . $id . '" name="editId">';
     } else {
         return '';

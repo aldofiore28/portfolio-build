@@ -12,7 +12,7 @@ function resultQueryErrors (bool $result) :string {
     if ($result && is_bool($result)) {
         return '<p class="confirmation">Operation Successful</p>';
     } else {
-        return '<p class="error">Fatal Error!</p>';
+        return '<p class="error">Operation Failed!</p>';
     }
 }
 
@@ -42,7 +42,7 @@ function validateText (string $testString) : bool {
  * @return string The new string without whitespaces
  */
 function sanitizationText (string $testString) : string {
-    $testString = (ltrim(rtrim($testString)));
+    $testString = trim($testString);
     $testString = filter_var($testString, FILTER_SANITIZE_STRING);
     return $testString;
 }

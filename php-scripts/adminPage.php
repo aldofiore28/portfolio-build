@@ -28,16 +28,16 @@ $result = populateDropdownEdit($arrayOfResults);
     <body>
         <main>
             <h1>CMS Portfolio</h1>
-            <form action="addContent.php" method="post">
+            <form action="addContent.php" method="POST">
                <input class="centerButton" type="submit" name="addButton" value="Add" />
             </form>
-            <form action="editContent.php" method="post">
+            <form action="editContent.php" method="POST">
                 <select name="aboutMeSectionEditId">
                     <?php echo $result; ?>
                 </select>
                 <input type="submit" name="editButton" value="Edit" />
             </form>
-            <form action="adminPage.php" method="post">
+            <form action="adminPage.php" method="POST">
                 <select name="aboutMeSectionRemoval">
                     <?php echo $result; ?>
                 </select>

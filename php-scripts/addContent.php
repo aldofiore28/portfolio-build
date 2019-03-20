@@ -7,9 +7,9 @@ require_once 'functions/errorHandlers.php';
 $db = getDBConn();
 
 if (isset($_POST['add'])) {
-    $textToSanitize = $_POST['toAddContent'];
-    if (validateText($textToSanitize)) {
-        $textToAdd = sanitizationText($textToSanitize);
+    $textToCheck = $_POST['toAddContent'];
+    if (validateText($textToCheck)) {
+        $textToAdd = sanitizationText($textToCheck);
         $resultQuery = insertTextInDB($db, $textToAdd);
         $errorMessage = resultQueryErrors($resultQuery);
     } else {
@@ -39,7 +39,11 @@ if (isset($_POST['add'])) {
         <button>
             <a href="adminPage.php">Go to Admin Page</a>
         </button>
-        <?php echo $errorMessage; ?>
+        <?php
+        if (isset($errorMessage)) {
+            echo $errorMessage;
+        }
+        ?>
     </main>
 </body>
 

@@ -13,9 +13,9 @@ if (isset($_POST['editButton'])) {
     $textToPopulate = printSelectedItem($arrayTextToPopulate);
 } else if (isset($_POST['edit'])) {
     $idTextToEdit = $_POST['editId'];
-    $textToSanitize = $_POST['contentToEdit'];
-    $editedText = sanitizationText($textToSanitize);
-    if (validateText($editedText)) {
+    $textToCheck = $_POST['contentToEdit'];
+    if (validateText($textToCheck)) {
+        $editedText = sanitizationText($textToCheck);
         $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
         $errorMessage = resultQueryErrors($resultQuery);
     } else {
@@ -38,7 +38,7 @@ if (isset($_POST['editButton'])) {
 <body>
     <main>
         <h1>Edit Content</h1>
-        <form id="formReference" method="post" action="editContent.php">
+        <form id="formReference" method="POST" action="editContent.php">
             <textarea form="formReference" name="contentToEdit"><?php
                 if (isset($textToPopulate)) {
                     echo $textToPopulate;

@@ -27,7 +27,7 @@ function getAboutMeContent (PDO $db) : array {
 function viewAboutContent (array $content) : string {
     $result = '';
     foreach ($content as $value) {
-        if (!in_array('', $value)) {
+        if (!strlen(trim($value['section'])) <= 0) {
             $result .= '<p>' . $value['section'] . '</p>';
         } else {
             continue;
