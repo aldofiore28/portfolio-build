@@ -35,12 +35,15 @@ function validateText (string $testString) : bool {
 
 /**
  * The following function will remove all the whitespaces from the start and the end of the
- * inputted text
+ * inputted text, then check
  *
  * @param string $testString The string that we want to change
  *
  * @return string The new string without whitespaces
  */
-function sanitationText (string $testString) : string {
-    return (ltrim(rtrim($testString)));
+function sanitizationText (string $testString) : string {
+    $testString = (ltrim(rtrim($testString)));
+    $testString = filter_var($testString, FILTER_SANITIZE_STRING);
+    return $testString;
+
 }

@@ -8,7 +8,7 @@ $db = getDBConn();
 
 if (isset($_POST['add'])) {
     if (validateText($_POST['toAddContent'])) {
-        $textToAdd = sanitationText($_POST['toAddContent']);
+        $textToAdd = sanitizationText($_POST['toAddContent']);
         $resultQuery = insertTextInDB($db, $textToAdd);
         $errorMessage = resultQueryErrors($resultQuery);
     } else {

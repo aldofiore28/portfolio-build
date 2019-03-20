@@ -15,7 +15,7 @@ if (isset($_POST['editButton'])) {
 else if (isset($_POST['edit'])) {
     $idTextToEdit = $_POST['editId'];
     if (validateText($_POST['contentToEdit'])) {
-        $editedText = sanitationText($_POST['contentToEdit']);
+        $editedText = sanitizationText($_POST['contentToEdit']);
         $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
         $errorMessage = resultQueryErrors($resultQuery);
     } else {
