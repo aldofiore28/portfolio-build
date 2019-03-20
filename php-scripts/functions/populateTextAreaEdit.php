@@ -31,6 +31,15 @@ function printSelectedItem (array $array) :string {
     return $result;
 }
 
+
+/**
+ * The Following function will check if the id of the selected item exists. If it does, it will generate
+ * an hidden input tag that will pass it to the new post request
+ *
+ * @param string $id The id of the text to change
+ *
+ * @return string Returns a string with the input tag and his attributes
+ */
 function generateHiddenInputWithId (string $id) {
     if (isset($id)) {
         return $hiddenInput = '<input type="hidden" value="' . $id . '" name="editId">';
