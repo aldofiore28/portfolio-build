@@ -3,6 +3,7 @@
 require 'functions/dbConnection.php';
 require 'functions/populateTextAreaEdit.php';
 require 'functions/queryEditContent.php';
+require 'functions/errorHandlers.php';
 
 $db = getDBConn();
 
@@ -10,17 +11,11 @@ if (isset($_POST['editButton'])) {
     $idTextToEdit = $_POST['aboutMeSectionEditId'];
     $arrayTextToPopulate = getSelectedItem($db, $idTextToEdit);
     $textToPopulate = printSelectedItem($arrayTextToPopulate);
-    $idToEdit = $arrayTextToPopulate['id'];
 }
 else if (isset($_POST['edit'])) {
     $idTextToEdit = $_POST['editId'];
     $editedText = $_POST['contentToEdit'];
     $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
-    if ($resultQuery) {
-        $errorMessage = '<p class="confirmation">The content has been edited!</p>';
-    } else {
-        $errorMessage = '<p class="error">Fatal Error!</p>';
-    }
 }
 
 ?>
@@ -44,9 +39,7 @@ else if (isset($_POST['edit'])) {
 ?>
                 </textarea>
                 <?php
-                if (isset($idToEdit)) {
-                    echo '<input type="hidden" value=' . $idToEdit . ' name="editId">';
-                }
+                    echo generateHiddenInputWithId($idTextToEdit);
                 ?>
                 <input type="submit" name="edit" value="Edit" />
             </form>
@@ -54,7 +47,7 @@ else if (isset($_POST['edit'])) {
             <button>
                 <a href="adminPage.php">Go to Admin Page</a>
             </button>
-            <?php echo $errorMessage; ?>
+            <?php echo resultQueryErrors($resultQuery); ?>
         </main>
     </body>
 
