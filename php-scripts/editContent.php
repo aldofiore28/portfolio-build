@@ -4,17 +4,18 @@ require 'functions/dbConnection.php';
 require 'functions/populateTextAreaEdit.php';
 require 'functions/queryEditContent.php';
 
-session_start();
-
 $db = getDBConn();
 
 if (isset($_POST['editButton'])) {
-    $_SESSION['id'] = $_POST['aboutMeSectionEditId'];
-    $textToPopulate = getSelectedItem($db, $_SESSION['id']);
+    $idTextToEdit = $_POST['aboutMeSectionEditId'];
+    $arrayTextToPopulate = getSelectedItem($db, $idTextToEdit);
+    $textToPopulate = printSelectedItem($arrayTextToPopulate);
+    $idToEdit = $arrayTextToPopulate['id'];
 }
 else if (isset($_POST['edit'])) {
+    $idTextToEdit = $_POST['editId'];
     $editedText = $_POST['contentToEdit'];
-    $resultQuery = updateSelectedText($db, $_SESSION['id'], $editedText);
+    $resultQuery = updateSelectedText($db, $idTextToEdit, $editedText);
     if ($resultQuery) {
         $errorMessage = '<p class="confirmation">The content has been edited!</p>';
     } else {
@@ -38,7 +39,15 @@ else if (isset($_POST['edit'])) {
             <h1>Edit Content</h1>
             <form id="formReference" method="post" action="editContent.php">
                 <textarea form="formReference" name="contentToEdit">
-<?php echo $textToPopulate; ?></textarea>
+<?php
+    echo $textToPopulate;
+?>
+                </textarea>
+                <?php
+                if (isset($idToEdit)) {
+                    echo '<input type="hidden" value=' . $idToEdit . ' name="editId">';
+                }
+                ?>
                 <input type="submit" name="edit" value="Edit" />
             </form>
 

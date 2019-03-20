@@ -10,12 +10,15 @@
  *
  * @return string Returns the selected text.
  */
-function getSelectedItem (PDO $db, string $idSelectedItem) : string {
-    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `id` = :idSelectedItem;');
+function getSelectedItem (PDO $db, string $idSelectedItem) : array {
+    $query = $db->prepare('SELECT `id`, `section` FROM `about_me_section` WHERE `id` = :idSelectedItem;');
     $query->bindParam(':idSelectedItem', $idSelectedItem);
     $query->execute();
-    $result = $query->fetchAll();
-    return $result[0]['section'];
+    return $query->fetch();
 }
 
+function printSelectedItem (array $array) :string {
+    $result = $array['section'];
+    return $result;
+}
 ?>
