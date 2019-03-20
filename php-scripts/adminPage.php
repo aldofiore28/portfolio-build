@@ -3,6 +3,7 @@
 require 'functions/dbConnection.php';
 require 'functions/populateDropdown.php';
 require 'functions/queryDeleteContent.php';
+require 'functions/errorHandlers.php';
 
 $db = getDBConn();
 
@@ -12,11 +13,7 @@ $result = populateDropdownEdit($arrayOfResults);
 if (isset($_POST['removeButton'])) {
     $idTextToDelete = $_POST['aboutMeSectionRemoval'];
     $resultQuery = deleteSelectedContent($db, $idTextToDelete);
-    if ($resultQuery) {
-        $errorMessage = '<p class="confirmation">The content has been deleted!</p>';
-    } else {
-        $errorMessage = '<p class="error">Fatal Error!</p>';
-    }
+    $errorMessage = resultQueryErrors($resultQuery);
 }
 
 ?>
@@ -51,7 +48,7 @@ if (isset($_POST['removeButton'])) {
                 <input type="submit" name="removeButton" value="Remove" />
             </form>
 
-                <?php echo $errorMessage; ?>
+                    <?php echo $errorMessage; ?>
             <button>
                 <a href="../index.php">Go to Main Page</a>
             </button>

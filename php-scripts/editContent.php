@@ -38,9 +38,7 @@ else if (isset($_POST['edit'])) {
     echo $textToPopulate;
 ?>
                 </textarea>
-                <?php
-                    echo generateHiddenInputWithId($idTextToEdit);
-                ?>
+                <?php echo generateHiddenInputWithId($idTextToEdit); ?>
                 <input type="submit" name="edit" value="Edit" />
             </form>
 

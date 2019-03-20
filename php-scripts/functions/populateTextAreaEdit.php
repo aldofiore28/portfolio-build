@@ -11,7 +11,7 @@
  * @return string Returns the selected text.
  */
 function getSelectedItem (PDO $db, string $idSelectedItem) : array {
-    $query = $db->prepare('SELECT `id`, `section` FROM `about_me_section` WHERE `id` = :idSelectedItem;');
+    $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `id` = :idSelectedItem;');
     $query->bindParam(':idSelectedItem', $idSelectedItem);
     $query->execute();
     return $query->fetch();
