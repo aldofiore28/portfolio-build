@@ -33,7 +33,7 @@ $printAboutMeText = viewContent($resultQueryView);
         <a href="mailto: aldo.fiore95@gmail.com" target="_top"><img src="img/email-icon3.png" alt="email icon"></a>
         <a href="tel: +447453151955" target="_top"><img src="img/telephone-icon.png" alt="telephone icon"></a>
       </div>
-            <a class="cms-button" href="login.php">CMS Page</a>
+            <a class="cms-button" href="php-scripts/adminPage.php">CMS Page</a>
     </nav>
 
     <!-- container for the right part of the website -->
