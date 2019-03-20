@@ -40,12 +40,11 @@ function printSelectedItem (array $array) :string {
  *
  * @return string Returns a string with the input tag and his attributes
  */
-function generateHiddenInputWithId (string $id) {
-    if (isset($id)) {
+function generateHiddenInputWithId (string $id) :string {
+    if (isset($id) && is_numeric($id)) {
         return $hiddenInput = '<input type="hidden" value="' . $id . '" name="editId">';
     } else {
         return $hiddenInput = '<input type="hidden" value="0" name="editId">';
     }
-
 }
 ?>
