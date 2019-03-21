@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: sans-serif;
 }
 
 main {
@@ -18,15 +19,20 @@ main {
 }
 
 form {
-    overflow: auto;
     width: 60%;
     margin: 20px auto 0 auto;
 }
 
 input {
-    border-radius: 2px;
     float: right;
     width: 70px;
+    border: 1px solid #49494b;
+}
+
+.logout-button {
+    margin-right: 20px;
+    float: right;
+    width: 200px;
 }
 
 .centerButton {
@@ -34,7 +40,7 @@ input {
 }
 
 button {
-    border-radius: 2px;
+    border: 1px solid #49494b;
     width: 200px;
     margin-top: 20px;
 }

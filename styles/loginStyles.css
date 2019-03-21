@@ -14,47 +14,36 @@ body {
 
 main {
     width: 300px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
+}
+
+label {
+    text-transform: uppercase;
 }
 
 h1 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 input {
-    border: 1px solid #49494b;
-    float: right;
-}
-
-.logout-button {
-    margin-right: 20px;
-    float: right;
-    width: 200px;
-}
-
-textarea {
     width: 100%;
-    height: 200px;
-}
-
-button {
+    margin-bottom: 10px;
     border: 1px solid #49494b;
 }
 
 a {
-    width: 100%;
     text-decoration: none;
     color: #000000;
 }
 
-p {
-    text-align: center;
+button {
+    border: 1px solid #49494b;
+    height: 21px;
 }
 
-.confirmation {
-    color: #008000;
-}
-
-.error {
-    color: #FF0000;
+.button {
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    float: right;
 }

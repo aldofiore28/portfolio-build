@@ -5,7 +5,18 @@ require_once 'functions/populateTextAreaEdit.php';
 require_once 'functions/queryEditContent.php';
 require_once 'functions/errorHandlers.php';
 
+session_start();
 $db = getDBConn();
+
+if (!isset($_SESSION['loggedIn'])) {
+    header('Location: login.php');
+} else {
+    $_SESSION['loggedIn'] = true;
+}
+
+if (isset($_POST['logout'])) {
+    header('Location: login.php');
+}
 
 if (isset($_POST['editButton'])) {
     $idTextToEdit = $_POST['aboutMeSectionEditId'];
@@ -36,6 +47,9 @@ if (isset($_POST['editButton'])) {
 </head>
 
 <body>
+    <form class="logout-button" action="login.php" method="POST">
+        <input type="submit" name="logout" value="Log Out">
+    </form>
     <main>
         <h1>Edit Content</h1>
         <form id="formReference" method="POST" action="editContent.php">
