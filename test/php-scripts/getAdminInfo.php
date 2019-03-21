@@ -121,7 +121,7 @@ class StackTest extends Testcase
         $this->assertEquals($expected, $case);
     }
 
-    public function testCheckLoginMalformedInput1()
+    public function testCheckLoginMalformedInputArrayString()
     {
         $input = ['hello'];
         $input2 = 'ciao';
@@ -129,7 +129,7 @@ class StackTest extends Testcase
         checkLogin($input, $input2);
     }
 
-    public function testCheckLoginMalformedInput2()
+    public function testCheckLoginMalformedInputStringArray()
     {
         $input = 'hello';
         $input2 = ['ciao'];
@@ -137,7 +137,7 @@ class StackTest extends Testcase
         checkLogin($input, $input2);
     }
 
-    public function testCheckLoginMalformed()
+    public function testCheckLoginMalformedArrayArray()
     {
         $input = ['hello'];
         $input2 = ['ciao'];
