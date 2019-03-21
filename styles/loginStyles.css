@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("../img/bkg-img6.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+main {
+    width: 300px;
+    margin: 20px auto 0 auto;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #49494b;
+}
+
+.button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    float: right;
+}
