@@ -6,7 +6,7 @@ require_once 'php-scripts/functions/viewFromDB.php';
 $db = getDBConn();
 
 $resultQueryView = getAboutMeContent($db);
-$printAboutMeText = viewContent($resultQueryView);
+$printAboutMeText = viewAboutContent($resultQueryView);
 
 ?>
 
