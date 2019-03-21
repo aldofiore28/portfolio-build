@@ -9,12 +9,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: sans-serif;
 }
 
 main {
     width: 300px;
     margin: 0 auto;
-    overflow: auto;
 }
 
 h1 {
@@ -22,8 +22,14 @@ h1 {
 }
 
 input {
-    border-radius: 2px;
+    border: 1px solid #49494b;
     float: right;
+}
+
+.logout-button {
+    margin-right: 20px;
+    float: right;
+    width: 200px;
 }
 
 textarea {
@@ -32,7 +38,7 @@ textarea {
 }
 
 button {
-    border-radius: 2px;
+    border: 1px solid #49494b;
 }
 
 a {
