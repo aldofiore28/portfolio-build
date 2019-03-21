@@ -1,4 +1,3 @@
-<?php ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +14,8 @@
             <label for="username">username</label>
             <input id="username" type="text" name="username" />
             <label for="password">password</label>
-            <input id="password" type="text" name="username" />
-            <input class="button" type="submit" value="LOGIN" />
+            <input id="password" type="password" name="password" />
+            <input class="button" type="submit" value="Login" />
         </form>
     </main>
 </body>
