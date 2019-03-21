@@ -29,8 +29,6 @@ if (!isset($_SESSION['loggedIn'])) {
 }
 
 if (isset($_POST['logout'])) {
-    session_destroy();
-    session_abort();
     header('Location: login.php');
 }
 
