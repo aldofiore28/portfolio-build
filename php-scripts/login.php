@@ -6,7 +6,7 @@ if (isset($_POST['logout'])) {
     session_unset();
 }
 
-if ($_SESSION['loggedIn']) {
+if (isset($_SESSION['loggedIn'])) {
     header('Location: adminPage.php');
 }
 
