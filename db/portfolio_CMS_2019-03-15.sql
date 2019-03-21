@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: portfolio_CMS
-# Generation Time: 2019-03-20 14:53:10 +0000
+# Generation Time: 2019-03-21 13:57:47 +0000
 # ************************************************************
 
 
@@ -40,9 +40,33 @@ VALUES
 	(1,'Hello! My name is Aldo and I`m a 23 year old Italian fella from a small town near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of the laptop with a good problem to solve. I particularly love the feeling of creating something, wether a product or a service that people can use. I currently feel confident in HTML and CSS and I look forward to learning the other languages the course has in store for us to expand my knowledge: PHP, Javascript and MySQL.',0),
 	(2,'I migrated in the UK for a scenery change and worked in casinos for about 3 years before I moved to Bath. Whilst considering other opportunities I remembered how much I had enjoyed the software development I experienced at high school, so decided to apply for the Mayden Academy to help change my career and life! In my free time I like to cook, as a proud Italian, for my friends and girlfriend. I also love relaxing at home watching movies.',0),
 	(3,'CIAO BELLO!!!!CHE SCHIFO LA VITA DIOCANE',1),
-	(4,'sdfdfsaafdsadsfasdf',1);
+	(4,'sdfdfsaafdsadsfasdf',1),
+	(5,'sddgsjidfbgouhdf',1);
 
 /*!40000 ALTER TABLE `about_me_section` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table admin
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL DEFAULT '',
+  `password` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+
+INSERT INTO `admin` (`id`, `username`, `password`)
+VALUES
+	(1,'aldofiore','$2y$10$EZKH0.ULab.InVUqRPtNyuoIcQt.fJmok78mTDelGVNtXXnflM1/m');
+
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
