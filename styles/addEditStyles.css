@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("../img/bkg-img6.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    width: 300px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+input {
+    border-radius: 2px;
+    float: right;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+button {
+    border-radius: 2px;
+}
+
+a {
+    width: 100%;
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    text-align: center;
+}
+
+.confirmation {
+    color: #008000;
+}
+
+.error {
+    color: #FF0000;
+}

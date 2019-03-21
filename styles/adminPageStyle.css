@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("../img/bkg-img6.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    overflow: auto;
+    width: 60%;
+    margin: 20px auto 0 auto;
+}
+
+input {
+    border-radius: 2px;
+    float: right;
+    width: 70px;
+}
+
+.centerButton {
+    float: none;
+}
+
+button {
+    border-radius: 2px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+select {
+    width: 250px;
+    text-overflow: ellipsis;
+}
+
+.confirmation {
+    color: green;
+}
+
+.error {
+    color: red;
+}
