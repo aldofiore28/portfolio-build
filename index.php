@@ -1,7 +1,7 @@
 <?php
 
-require 'php-scripts/functions/dbConnection.php';
-require 'php-scripts/functions/viewFromDB.php';
+require_once 'php-scripts/functions/dbConnection.php';
+require_once 'php-scripts/functions/viewFromDB.php';
 
 $db = getDBConn();
 
