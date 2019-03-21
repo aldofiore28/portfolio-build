@@ -18,7 +18,6 @@ $printAboutMeText = viewAboutContent($resultQueryView);
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
   </head>
   <body>
-  <!-- Navbar -->
     <nav class="fixed-navbar">
       <img class="profile-picture" src="img/profile-picture2.jpg" alt="my-picture" />
       <ul>
@@ -33,7 +32,7 @@ $printAboutMeText = viewAboutContent($resultQueryView);
         <a href="mailto: aldo.fiore95@gmail.com" target="_top"><img src="img/email-icon3.png" alt="email icon"></a>
         <a href="tel: +447453151955" target="_top"><img src="img/telephone-icon.png" alt="telephone icon"></a>
       </div>
-      <a class="cms-button" href="php-scripts/login.php" target="_blank">CMS Page</a>
+      <a class="cms-button" href="php-scripts/login.php">CMS Page</a>
     </nav>
 
     <main class="container">
