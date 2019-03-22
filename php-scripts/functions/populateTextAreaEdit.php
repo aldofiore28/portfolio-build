@@ -8,7 +8,7 @@
  * @param PDO $db Database connection.
  * @param string $idSelectedItem Id of the item that we selected in the dropdown.
  *
- * @return string Returns the selected text.
+ * @return array Returns the selected text.
  */
 function getSelectedItem (PDO $db, string $idSelectedItem) : array {
     $query = $db->prepare('SELECT `section` FROM `about_me_section` WHERE `id` = :idSelectedItem;');
