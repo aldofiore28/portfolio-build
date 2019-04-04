@@ -52,7 +52,7 @@ $printAboutMeText = viewAboutContent($resultQueryView);
       <section id ="projects" class="projects internal-container">
         <h1>Projects</h1>
         <article>
-            <img src="img/coming-soon2.png" alt="coming-soon">
+            <img src="img/paintmaster.png" alt="coming-soon">
           <p>
             <a href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank">< Work in progress ></a>
           </p>
